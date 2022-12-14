@@ -1,11 +1,20 @@
 <script>
 import Results from './character-list-components/Results.vue';
+import CardGenerator from './character-list-components/CardGenerator.vue';
+
+import { store } from '../store.js';
 
 export default {
     name: "CharacterList",
 
     components: {
         Results,
+        CardGenerator,
+    },
+    data() {
+        return {
+            store,
+        }
     }
 }
 </script>
@@ -13,6 +22,9 @@ export default {
 <template>
     <div class="container">
         <Results />
+        <div class="small_container">
+            <CardGenerator />
+        </div>
     </div>
 </template>
 
