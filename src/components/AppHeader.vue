@@ -26,13 +26,13 @@ section {
     @include start();
 
     div {
-        width: 100px;
-        height: 100%;
+        width: 70px;
+        height: 70px;
         margin-right: 20px;
     }
 
     h1 {
-        font-size: 27px;
+        font-size: 35px;
     }
 }
 </style>
