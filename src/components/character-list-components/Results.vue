@@ -17,6 +17,7 @@ export default {
 .small_container {
     background-color: #212529;
     padding: 10px;
+    margin-bottom: 30px;
     font-weight: 600;
 }
 </style>
