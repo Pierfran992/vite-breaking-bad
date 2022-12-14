@@ -39,7 +39,7 @@ export default {
 
 <template>
     <div class="container">
-        <Results />
+        <Results :info="store.characterList.length" />
         <div class="small_container">
             <!-- creo un ciclo for su CardGenerator così da stampare tutti gli oggetti contenuti nell'array characterList contenuto nel file store.js-->
             <CardGenerator v-for="obj in store.characterList" :key="obj.id" :info="obj" />

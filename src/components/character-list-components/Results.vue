@@ -1,12 +1,14 @@
 <script>
 export default {
     name: "Results",
+
+    props: ["info"],
 }
 </script>
 
 <template>
     <div class="small_container">
-        <h2>Found 62 characters</h2>
+        <h2>Found {{ info }} characters</h2>
     </div>
 </template>
 
