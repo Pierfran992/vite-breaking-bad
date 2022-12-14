@@ -1,12 +1,18 @@
 <script>
+import Results from './character-list-components/Results.vue';
+
 export default {
     name: "CharacterList",
+
+    components: {
+        Results,
+    }
 }
 </script>
 
 <template>
     <div class="container">
-
+        <Results />
     </div>
 </template>
 
