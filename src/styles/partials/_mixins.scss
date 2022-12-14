@@ -12,8 +12,16 @@
     align-items: center;
 }
 
+// metto gli elementi con flex in colonna
 @mixin column() {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+// allineo gli elementi allo start della riga
+@mixin start() {
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
