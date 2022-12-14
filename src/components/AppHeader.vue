@@ -30,6 +30,7 @@ section {
     div {
         width: 200px;
         height: 100px;
+        padding-top: 10px;
         margin-right: 20px;
     }
 
