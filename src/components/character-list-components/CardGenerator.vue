@@ -29,8 +29,12 @@ export default {
     padding: 10px;
     text-align: center;
 
-    .slot_img_card {
+    * {
         margin-bottom: 10px;
+    }
+
+    span {
+        color: $thirdColor;
     }
 
 }

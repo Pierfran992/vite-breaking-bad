@@ -22,7 +22,7 @@ export default {
     padding-left: 10px;
 
     .select {
-        color: $primaryColor;
+        color: $secondaryColor;
         width: fit-content;
         padding: 10px 20px;
         background-color: $thirdColor;
