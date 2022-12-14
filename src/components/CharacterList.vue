@@ -41,7 +41,8 @@ export default {
     <div class="container">
         <Results />
         <div class="small_container">
-            <CardGenerator />
+            <!-- creo un ciclo for su CardGenerator così da stampare tutti gli oggetti contenuti nell'array characterList contenuto nel file store.js-->
+            <CardGenerator v-for="obj in store.characterList" :key="obj.id" :info="obj" />
         </div>
     </div>
 </template>
@@ -54,5 +55,12 @@ export default {
     background-color: $primaryColor;
     margin-top: 30px;
     padding: 30px;
+}
+
+.small_container {
+    @include between();
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 30px 5px;
 }
 </style>

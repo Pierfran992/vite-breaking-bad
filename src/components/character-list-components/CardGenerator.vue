@@ -2,7 +2,7 @@
 export default {
     name: "CardGenerator",
 
-    props: [],
+    props: ["info"],
 }
 </script>
 
@@ -10,12 +10,12 @@ export default {
     <!-- creo la card -->
     <div class="gen_card">
         <div class="slot_img_card">
-            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="">
+            <img :src="info.image" :alt="info.name">
         </div>
-        <h4>Rick Sanchez</h4>
-        <span></span>
+        <h4>{{ info.name }}</h4>
+        <span>{{ info.status }}</span>
         <br>
-        <span></span>
+        <span>{{ info.species }}</span>
     </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
 
 .gen_card {
     background-color: $secondaryColor;
-    width: calc(100% / 5);
+    width: calc((100% - 30px)/ 5);
     padding: 10px;
     text-align: center;
 
