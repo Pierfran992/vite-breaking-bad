@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios';
 import Results from './character-list-components/Results.vue';
 import CardGenerator from './character-list-components/CardGenerator.vue';
 
@@ -15,6 +16,23 @@ export default {
         return {
             store,
         }
+    },
+    methods: {
+        // creo il metodo per far inserire gli oggetti contenuti il results nell'array vuoto characterList
+        getCharacters() {
+            axios
+                .get(store.apiURL)
+                .then(res => {
+                    store.characterList = res.data.results;
+                })
+                .catch(problem => {
+                    console.log("Errori", problem);
+                });
+        }
+    },
+    mounted() {
+        // faccio partire il metodo dopo che ha caricato la struttura della pagina
+        this.getCharacters();
     }
 }
 </script>
