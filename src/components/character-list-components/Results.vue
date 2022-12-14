@@ -17,7 +17,7 @@ export default {
 @use '../../styles/partials/mixins' as *;
 
 .small_container {
-    background-color: #212529;
+    background-color: $secondaryColor;
     padding: 10px;
     margin-bottom: 30px;
     font-weight: 600;

@@ -22,14 +22,16 @@ export default {
     padding-left: 10px;
 
     .select {
-        color: #2e3a46;
+        color: $primaryColor;
         width: fit-content;
         padding: 10px 20px;
-        background-color: $primaryColor;
+        background-color: $thirdColor;
         border-radius: 10px;
+
 
         span {
             margin-right: 10px;
+            font-weight: 600;
         }
     }
 }

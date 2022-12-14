@@ -52,8 +52,9 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 .container {
-    background-color: $primaryColor;
+    background-color: $thirdColor;
     margin-top: 30px;
+    margin-bottom: 100px;
     padding: 30px;
 }
 
