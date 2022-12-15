@@ -7,10 +7,12 @@ export default {
 <template>
     <!-- creo la lista per selezionare le varie categorie -->
     <div class="container">
-        <div class="select">
-            <span>Select category</span>
-            <font-awesome-icon icon="fa-solid fa-angle-down" />
-        </div>
+        <select name="status" id="statusCharacter">
+            <option value="">Select Status Character</option>
+            <option value="Alive">Alive</option>
+            <option value="Dead">Dead</option>
+            <option value="unknown">Unknown</option>
+        </select>
     </div>
 </template>
 
@@ -21,18 +23,15 @@ export default {
 .container {
     padding-left: 10px;
 
-    .select {
+    #statusCharacter {
         color: $secondaryColor;
         width: fit-content;
+        margin-top: 30px;
         padding: 10px 20px;
         background-color: $thirdColor;
         border-radius: 10px;
-
-
-        span {
-            margin-right: 10px;
-            font-weight: 600;
-        }
+        border: none;
+        cursor: pointer;
     }
 }
 </style>
