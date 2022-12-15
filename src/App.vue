@@ -21,8 +21,15 @@ export default {
     methods: {
         // creo il metodo per far inserire gli oggetti contenuti il results nell'array vuoto characterList
         getCharacters() {
+
+            let myUrl = store.apiURL;
+            // creata la condizione per modificare l'url di partenza
+            if (store.searchStatus !== "") {
+                myUrl += `?${store.apiStatusParameter}=${store.searchStatus}`;
+            }
+
             axios
-                .get(store.apiURL)
+                .get(myUrl)
                 .then(res => {
                     store.characterList = res.data.results;
                 })
@@ -40,7 +47,7 @@ export default {
 
 <template>
     <AppHeader />
-    <SelectCategory />
+    <SelectCategory @search="getCharacters" />
     <CharacterList />
 </template>
 
