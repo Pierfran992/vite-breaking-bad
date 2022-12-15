@@ -32,6 +32,7 @@ export default {
                 .get(myUrl)
                 .then(res => {
                     store.characterList = res.data.results;
+                    store.totalResults = res.data.info.count;
                 })
                 .catch(problem => {
                     console.log("Errori", problem);
